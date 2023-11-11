@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>forEacheExample</title>
+</head>
+<body>
+    <main>
+        <h1>Favorite fruit</h1>
+        <ul>
+            <li>lemon</li>
+            <li>ananas</li>
+            <li>avocado</li>
+            <li>cherry</li>
+        </ul><br><br>
+        <button onclick="capitalFirstLetter()" id="ok">Capitalize first letter</button>
+    </main>
+
+    <script>function capitalFirstLetter() {
+           var liElements = document.getElementsByTagName("li") ;
+           Array.from(liElements).forEach(element => {
+               element.textContent = element.textContent.charAt(0).toUpperCase() + element.textContent.slice(1);
+           });
+        }</script>
+</body>
+</html>
